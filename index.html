@@ -19,7 +19,7 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-lg-5">
-            <a class="navbar-brand" href="#!">Favicon.ico Genetor</a>
+            <a class="navbar-brand" href="#!">Favicon.ico Generator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -38,17 +38,31 @@
         <div class="container px-lg-5">
             <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                 <div class="m-4 m-lg-5">
-                    <h1 class="display-5 fw-bold">Projeleriniz için favicon üretin</h1>
-                    <p class="fs-4">Web uygulamamız, verilen bir görselin arka planını silerek çeşitli çözünürlüklerde
+                    <h1 class="display-6 fw-bold">Projeleriniz için favicon üretin</h1>
+                    <p class="fs-5">Web uygulamamız, verilen bir görselin arka planını silerek çeşitli çözünürlüklerde
                         faviconlar üretir. Oluşturduğu ikonlar arasında 192x192 ve 512x512 piksel Android Chrome
                         ikonları, 180x180 piksel Apple dokunmatik ikonu, 32x32 piksel favicon.ico, 16x16 ve 32x32 piksel
                         faviconlar ve 150x150 piksel Microsoft tile ikonu bulunur. Bu sayede, kullanıcılar çeşitli
                         platformlarda kullanıma hazır ikonlara sahip olur.</p>
 
                     <div class="mb-3">
-                        <input class="form-control form-control-lg" type="file" id="imageFile" accept="image/*"
-                            required>
-
+                        <input class="form-control form-control" type="file" id="imageFile" accept="image/*" required>
+                    </div>
+                    <div class="container">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="faviconOptions" id="option1"
+                                value="multiple" checked>
+                            <label class="form-check-label h6" for="option1">
+                                Web, Android, Microsoft ve iOS (iPhone ve iPad) Uygulamaları için simgeler oluşturun.
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="faviconOptions" id="option2"
+                                value="single">
+                            <label class="form-check-label h6" for="option2">
+                                Sadece 16x16 favicon.ico oluşturun.
+                            </label>
+                        </div>
                     </div>
                     <div class="mb-3"><button class="btn btn-success btn-lg" onclick="generateFavicons()">Generate
                             Favicons</button>
@@ -57,21 +71,57 @@
             </div>
         </div>
     </header>
+    <div class="py-1" id="whatsNext" hidden>
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+                <div class="m-4 m-lg-5">
+                    <!-- <h1 class="display-6 fw-bold">Projeleriniz için favicon üretin</h1> -->
+                    <p class="fs-5">Faviconları indirip aşağıdaki kodu HTML'nizin head kısmını yerleştirin.</p>
+                    <pre> <span class="nt">&lt;link</span><span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">href=</span><span class="s">"/favicon.ico"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">href=</span><span class="s">"/favicon.ico"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span><span class="nt">&gt;</span>
+                        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Page Content-->
     <section class="pt-4" id="resultContainer" hidden>
         <div class="container px-lg-5">
             <!-- Page Features-->
             <div class="row gx-lg-5">
+
                 <div class="col-lg-6 col-xxl-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                             <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
-                                    class="bi bi-collection"></i></div>
-                            <h2 class="fs-4 fw-bold">Faviconlar</h2>
+                                    class="bi bi-cloud-download"></i></div>
+                            <h2 class="fs-4 fw-bold">Free to download</h2>
                             <div id="results"></div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-card-heading"></i></div>
+                            <h2 class="fs-4 fw-bold">Jumbotron hero header</h2>
+                            <p class="mb-0">The heroic part of this template is the jumbotron hero header!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
+                                    class="bi bi-code"></i></div>
+                            <h2 class="fs-4 fw-bold">Simple clean code</h2>
+                            <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -85,6 +135,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
     <script>
         function generateFavicons() {
             const fileInput = document.getElementById('imageFile');
@@ -99,11 +150,14 @@
                 processImage(img);
                 URL.revokeObjectURL(img.src);
             };
-            resultContainer.hidden = false;
+            document.getElementById('whatsNext').hidden = false;
+            document.getElementById('resultContainer').hidden = false;
         }
 
         function processImage(img) {
-            const sizes = [
+            const selectedOption = document.querySelector('input[name="faviconOptions"]:checked').value;
+
+            const multipleSizes = [
                 { name: 'android-chrome-192x192.png', size: 192, removeBg: true },
                 { name: 'android-chrome-512x512.png', size: 512, removeBg: true },
                 { name: 'apple-touch-icon.png', size: 180, removeBg: false },
@@ -113,8 +167,36 @@
                 { name: 'mstile-150x150.png', size: 150, removeBg: true },
             ];
 
+            const singleSize = [
+                { name: 'favicon-16x16.png', size: 16, removeBg: true },
+            ];
+
+            const sizes = selectedOption === 'multiple' ? multipleSizes : singleSize;
+
             const resultsDiv = document.getElementById('results');
             resultsDiv.innerHTML = '';
+            const zip = new JSZip();
+
+            const addFileToZip = (name, blob) => {
+                zip.file(name, blob);
+                if (Object.keys(zip.files).length === sizes.length) {
+                    zip.generateAsync({ type: 'blob' }).then(content => {
+                        const link = document.createElement('a');
+                        link.href = URL.createObjectURL(content);
+                        link.download = 'favicons.zip';
+                        link.textContent = 'Download Favicons Zip';
+                        resultsDiv.appendChild(link);
+                    });
+                }
+            };
+
+            const downloadSingleFile = (name, blob) => {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = name;
+                link.textContent = 'Download favicon-16x16.png';
+                resultsDiv.appendChild(link);
+            };
 
             sizes.forEach(({ name, size, removeBg }) => {
                 const canvas = document.createElement('canvas');
@@ -128,11 +210,11 @@
                 }
 
                 canvas.toBlob(blob => {
-                    const link = document.createElement('a');
-                    link.href = URL.createObjectURL(blob);
-                    link.download = name;
-                    link.textContent = `Download ${name}`;
-                    resultsDiv.appendChild(link);
+                    if (selectedOption === 'multiple') {
+                        addFileToZip(name, blob);
+                    } else {
+                        downloadSingleFile(name, blob);
+                    }
                 }, name.endsWith('.ico') ? 'image/x-icon' : 'image/png');
             });
         }
