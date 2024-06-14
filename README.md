@@ -8,21 +8,13 @@ Favicon.ico Oluşturucu projesi, web siteleri ve web uygulamaları için favicon
 
 ### Kullanılan Teknolojiler
 
--Bootstrap : https://getbootstrap.com/
--JSZip : https://www.npmjs.com/package/jszip
--Canvas API : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+  -Bootstrap : https://getbootstrap.com/
+  -JSZip : https://www.npmjs.com/package/jszip
+  -Canvas API : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
 ## Demo
 
 Demoya gif veya bağlantı ekleyin
-
-## Lisans
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 ## Ekran Görüntüleri
 
@@ -31,3 +23,12 @@ Demoya gif veya bağlantı ekleyin
 ## Destek
 
 Destek için muhammetahmet.araci@gmail.com adersine mail gönderebilirsiniz.
+
+
+## Lisans
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
