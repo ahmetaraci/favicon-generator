@@ -40,7 +40,7 @@ function processImage(img) {
 
   const addFileToZip = (name, blob) => {
     zip.file(name, blob);
-    if (Object.keys(zip.files).length === sizes.length) {
+    if (Object.keys(zip.files).length === sizes.length + 1) {
       zip.generateAsync({ type: "blob" }).then((content) => {
         const link = document.createElement("a");
         link.href = URL.createObjectURL(content);
@@ -55,7 +55,7 @@ function processImage(img) {
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.download = name;
-    link.textContent = "Download favicon-16x16.png";
+    link.textContent = `Download ${name}`;
     resultsDiv.appendChild(link);
   };
 
@@ -67,7 +67,7 @@ function processImage(img) {
     ctx.drawImage(img, 0, 0, size, size);
 
     if (removeBg) {
-      removeBackground(canvas);
+      removeBackground(ctx, canvas);
     }
 
     canvas.toBlob(
@@ -81,10 +81,56 @@ function processImage(img) {
       name.endsWith(".ico") ? "image/x-icon" : "image/png"
     );
   });
+
+  // manifest.json dosyasını ekle
+  const manifestContent = `{
+    "name": "App",
+    "icons": [
+      {
+        "src": "/android-icon-36x36.png",
+        "sizes": "36x36",
+        "type": "image/png",
+        "density": "0.75"
+      },
+      {
+        "src": "/android-icon-48x48.png",
+        "sizes": "48x48",
+        "type": "image/png",
+        "density": "1.0"
+      },
+      {
+        "src": "/android-icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "density": "1.5"
+      },
+      {
+        "src": "/android-icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "density": "2.0"
+      },
+      {
+        "src": "/android-icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "density": "3.0"
+      },
+      {
+        "src": "/android-icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "density": "4.0"
+      }
+    ]
+  }`;
+  const manifestBlob = new Blob([manifestContent], {
+    type: "application/json",
+  });
+  zip.file("manifest.json", manifestBlob);
 }
 
-function removeBackground(canvas) {
-  const ctx = canvas.getContext("2d");
+function removeBackground(ctx, canvas) {
   const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const data = imgData.data;
 
@@ -95,4 +141,14 @@ function removeBackground(canvas) {
   }
 
   ctx.putImageData(imgData, 0, 0);
+}
+
+function copyCode() {
+  const codeElement = document.getElementById("codeContent");
+  const textArea = document.createElement("textarea");
+  textArea.value = codeElement.textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textArea);
 }
