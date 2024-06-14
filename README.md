@@ -8,9 +8,9 @@ Favicon.ico Oluşturucu projesi, web siteleri ve web uygulamaları için favicon
 
 ### Kullanılan Teknolojiler
 
-  -Bootstrap : https://getbootstrap.com/
-  -JSZip : https://www.npmjs.com/package/jszip
-  -Canvas API : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+  - Bootstrap : https://getbootstrap.com/
+  - JSZip : https://www.npmjs.com/package/jszip
+  - Canvas API : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
 ## Demo
 
