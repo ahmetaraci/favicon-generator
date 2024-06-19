@@ -8,22 +8,23 @@ Favicon.ico Oluşturucu projesi, web siteleri ve web uygulamaları için favicon
 
 ### Kullanılan Teknolojiler
 
-  - Bootstrap : https://getbootstrap.com/
-  - JSZip : https://www.npmjs.com/package/jszip
-  - Canvas API : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+- Bootstrap : https://getbootstrap.com/
+- JSZip : https://www.npmjs.com/package/jszip
+- Canvas API : https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
-## Demo
+## Uygulama Linki
 
-Demoya gif veya bağlantı ekleyin
+[Favicon.ico Generator](https://ahmetaraci.github.io/favicon-generator/)
 
 ## Ekran Görüntüleri
 
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Uygulama Ekran Görüntüsü](/assets/app_screenshot.png)
 
-## Destek
+## İletişim
 
-Destek için muhammetahmet.araci@gmail.com adersine mail gönderebilirsiniz.
+Destek ve önerileriniz için muhammetahmet.araci@gmail.com adersine mail gönderebilirsiniz.
 
+[Bağlantıdan iletişime geçebilirsiniz.](https://ahmetaraci.github.io/contact/)
 
 ## Lisans
 
